@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>login page </title>
+        <link rel="stylesheet" href="mycss.css">
+        <script>
+            function validation()
+            {
+                var name=document.form.username.value;
+                var password=document.form.password.value;
+                if(name==null||name=="")
+                {
+                    alert("please fill name");
+                    return false;
+                }
+                else if(password.length<6)
+                {
+                    alert(" password must be 6 character");
+                    return false;
+                }
+            }
+        </script>
+</head>
+<body>
+    <h1 align="center"> ACCOUNT LOGIN </h1>    
+    <form method ="post" onsubmit="return validation()" name="form">
+        <table align="center">
+            <tr>
+               <th> <label> <h2> USERNAME </h2> </label></th>
+             </tr>
+             <tr>  
+                <th><input  type="text" placeholder="Enter username" name="username"><th>
+              </tr>
+              <tr>    
+                <th><label> <h2> PASSWORD </h2></label></th>
+               </tr>
+               <tr> 
+                    <th><input type="password" placeholder="Enter password" name="password"><br><br></th>
+               </tr>
+                <tr>     
+                    <th><input type="submit" value="Login"></th>
+                </tr>
+          </table>  
+    </form>
+</body>
+</html>
